@@ -1,14 +1,153 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디퓨리(diffulee) - 우리 집 댕냥이 양반 만들기</title>
+    <style>
+        /* 어르신들을 위한 큰 글씨와 깔끔한 디자인 */
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: #f9f4ef;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: #8b4513; font-size: 28px; margin-bottom: 10px; }
+        p.subtitle { font-size: 18px; color: #666; margin-bottom: 30px; }
+
+        .step-box {
+            text-align: left;
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 15px;
+        }
+
+        .step-title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #d2691e;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* 사진 올리기 바 */
+        input[type="file"] {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            background: #fffaf0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* 스타일 선택 (큰 버튼 형태) */
+        .style-select {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .style-option {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .style-option:hover { background: #fffaf0; border-color: #d2691e; }
+
+        /* 변신 시작 버튼 */
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background-color: #8b4513;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p.subtitle {
+                font-size: 16px;
+            }
+            .step-title {
+                font-size: 18px;
+            }
+            .style-select {
+                grid-template-columns: 1fr;
+            }
+            .style-option {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .submit-btn {
+                font-size: 20px;
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+<div class="container">
+    <h1>디퓨리(diffulee) 설날 이벤트</h1>
+    <p class="subtitle">우리 강아지·고양이가 양반이 된다면?</p>
+
+    <div class="step-box">
+        <span class="step-title">1. 예쁜 사진을 골라주세요</span>
+        <input type="file" accept="image/*">
+        <p style="font-size: 14px; color: #888; margin-top: 5px;">* 앨범에서 우리 아이 사진을 선택하세요.</p>
+    </div>
+
+    <div class="step-box">
+        <span class="step-title">2. 입고 싶은 옷을 고르세요</span>
+        <div class="style-select">
+            <div class="style-option">🎩 갓 쓴 양반</div>
+            <div class="style-option">🌸 고운 설빔</div>
+            <div class="style-option">👑 근엄한 임금</div>
+            <div class="style-option">🏮 장원급제</div>
+        </div>
+    </div>
+
+    <button class="submit-btn" onclick="alert('멋진 사진으로 변신을 시작합니다!\n잠시만 기다려주세요.')">
+        우리 아이 변신시키기!
+    </button>
+
+    <div class="footer">
+        © diffulee - 향기와 추억을 선물합니다
+    </div>
+</div>
+
 </body>
 </html>
